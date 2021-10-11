@@ -48,5 +48,38 @@ namespace DataStructuresStacksNQueues
             }
             Console.WriteLine("\n");
         }
+        /// <summary>
+        /// Find the Top most element of the stack i.e. Peek
+        /// </summary>
+        /// <returns></returns>
+        public int Peek()
+        {
+            NodeCreation temp = this.top;
+            if (temp == null)
+            {
+                Console.WriteLine("Given stack is empty");
+                return temp.data;
+            }
+            else
+            {
+                return temp.data;
+            }
+        }
+        /// <summary>
+        /// Pop the element from the stack one by one till stack is empty
+        /// </summary>
+        public void Pop()
+        {
+            if (top == null)
+            {
+                return;
+            }
+            else
+            {
+                Console.Write(top.data + " ");
+                this.top = top.next;
+                Pop();
+            }
+        }
     }
 }

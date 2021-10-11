@@ -12,14 +12,26 @@ namespace DataStructuresStacksNQueues
         {
             Console.WriteLine("****************************************************************");
             Console.WriteLine("Welcome to  Stack and Queue");
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("****************************************************************");
-            //Object of class LinkedListStack
-            StackWithLinkedList stack = new StackWithLinkedList();
-            stack.Push(70);
-            stack.Push(30);
-            stack.Push(56);
-            Console.WriteLine("After pushing some node into stack");
-            stack.DisplayLL();
+            Console.WriteLine("Press 1 : for stack \nPress 0 : to exit");
+            Console.WriteLine("****************************************************************\n");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine("****************************************************************");
+                    Console.WriteLine("Welcome to  Stack");
+                    Console.WriteLine("****************************************************************\n");
+                    Stack.StackMethod();
+                    break;
+                case 0:
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Invalid option");
+                    break;
+            }
             Console.ReadLine();
         }
     }
