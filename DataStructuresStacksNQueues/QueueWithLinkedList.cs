@@ -42,5 +42,25 @@ namespace DataStructuresStacksNQueues
             }
             Console.WriteLine("\n");
         }
+        public int Dequeue()
+        {
+
+            if (this.frontNode == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return frontNode.data;
+            }
+            else
+            {
+                NodeCreation temp = frontNode;
+                this.frontNode = frontNode.next;
+                return temp.data;
+            }
+            if (frontNode == null)
+            {
+                this.rearNode = null;
+            }
+
+        }
     }
 }
